@@ -37,4 +37,11 @@ internal class HotelTest {
         hotel.checkInGuest(guest, bedroom1)
         assertEquals(1, bedroom1.countGuests())
     }
+
+    @Test
+    fun canCheckOutGuests() {
+        hotel.checkInGuest(guest, bedroom1)
+        hotel.checkOutGuests(bedroom1)
+        assertEquals(0, bedroom1.countGuests())
+    }
 }

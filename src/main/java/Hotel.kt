@@ -12,7 +12,11 @@ class Hotel (name: String, bedrooms: ArrayList<Bedroom>, conferenceRooms: ArrayL
         return conferenceRooms.size
     }
 
-    fun checkInGuest(guest: Guest, bedroom1: Bedroom) {
-        bedroom1.addGuestToRoom(guest)
+    fun checkInGuest(guest: Guest, bedroom: Bedroom) {
+        bedroom.addGuestToRoom(guest)
+    }
+
+    fun checkOutGuests(bedroom: Bedroom) {
+        bedroom.checkOutRoom()
     }
 }

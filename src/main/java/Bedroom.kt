@@ -12,4 +12,8 @@ class Bedroom (roomNumber: Int, capacity: Int, type: String) {
     fun addGuestToRoom(guest: Guest) {
         guests.add(guest)
     }
+
+    fun checkOutRoom() {
+        guests.clear()
+    }
 }
