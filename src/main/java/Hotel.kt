@@ -11,4 +11,8 @@ class Hotel (name: String, bedrooms: ArrayList<Bedroom>, conferenceRooms: ArrayL
     fun countConferenceRooms(): Int {
         return conferenceRooms.size
     }
+
+    fun checkInGuest(guest: Guest, bedroom1: Bedroom) {
+        bedroom1.addGuestToRoom(guest)
+    }
 }
