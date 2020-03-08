@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions.*
 internal class BedroomTest {
 
     val bedroom1 = Bedroom(101, 2, "Double")
+    val guest = Guest("John Brown")
 
     @Test
     fun getRoomNumber() {
@@ -24,5 +25,11 @@ internal class BedroomTest {
     @Test
     fun bedroomStartsEmpty() {
         assertEquals(0, bedroom1.countGuests())
+    }
+
+    @Test
+    fun canAddGuestToRoom() {
+        bedroom1.addGuestToRoom(guest)
+        assertEquals(1, bedroom1.countGuests())
     }
 }

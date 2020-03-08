@@ -8,4 +8,8 @@ class Bedroom (roomNumber: Int, capacity: Int, type: String) {
     fun countGuests(): Int {
         return guests.size
     }
+
+    fun addGuestToRoom(guest: Guest) {
+        guests.add(guest)
+    }
 }

@@ -15,6 +15,8 @@ internal class HotelTest {
 
     val hotel = Hotel("Fawlty Towers", bedrooms, conferenceRooms)
 
+    val guest = Guest("Gregor")
+
     @Test
     fun getName() {
         assertEquals("Fawlty Towers", hotel.name)
@@ -28,5 +30,10 @@ internal class HotelTest {
     @Test
     fun countConferenceRooms() {
         assertEquals(2, hotel.countConferenceRooms())
+    }
+
+    @Test
+    fun canCheckInGuest() {
+        hotel.checkInGuest(guest, bedroom1)
     }
 }
